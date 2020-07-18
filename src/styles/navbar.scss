@@ -1,0 +1,35 @@
+nav{
+  min-height: 75px;
+  transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition-property:height,min-height,background-color;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+
+    .top-nav-collapse{
+        background-color: #3949ab !important;
+      }
+      
+      .navbar:not(.top-nav-collapse) {
+        background: transparent !important;
+      }
+    .navbar-toggler-icon {
+       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+       cursor: pointer;
+    }
+
+
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background: #3949ab !important;
+      min-height: 50px;
+}
+}
+
+.my-colored{
+  background: #3949ab !important;
+  min-height: 50px;
+}

@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import './App.scss';
+import Home from './components/home';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap'
+import WOW from 'wowjs'
+import Features from './components/features';
+import About from './components/about';
+import Projects from './components/projects';
+import Pricing from './components/pricing';
+import Team from './components/team';
+import Contact from './components/contact';
+import Footer from './components/footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  state = {  }
+  componentDidMount() {
+    new WOW.WOW({live:false}).init()
+    window.addEventListener('scroll',this.handleEvent)
+  }
+  handleEvent = (e)=> {
+    // console.log(e)
+  }
+  render() { 
+    return (
+    <React.Fragment>
+      <Home />
+      <main>
+        <Features />
+        <About />
+        <Projects />
+        <Pricing />
+        <Team />
+        <Contact />
+        <Footer />
+      </main>
+    </React.Fragment>
+    );
+  }
 }
-
+ 
 export default App;
